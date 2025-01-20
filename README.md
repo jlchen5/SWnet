@@ -33,68 +33,68 @@ As shown below, SWnet adopts a dual converge architercture.Genomic signature and
 The code for the SWnet can be found in `multi-task, self-attention, single-layer`.
 
 ### Evaluation on pretrained model
-* `cd self-attention`
+* `cd self-attention/`
 * `python SWnet_GDSC_self-attention_evaluate.py `
 * `python SWnet_CCLE_self-attention_evaluate.py `
 ### or
 
 ### Train a prediction model on GDSC data
 #### Prepare graph data, we can set the radius parameter to 1, 2, 3 or 4
-* `cd data/GDSC` 
+* `cd data/GDSC/` 
 * `python preprocess_drug_graph.py --radius 1`
 
 #### Prepare drug similarity data
-* `cd data/GDSC`
+* `cd data/GDSC/`
 * `python preprocess_drug_similarity.py`
 
 #### Train self-attention SWnet 
-* `cd self-attention`
+* `cd self-attention/`
 * `python SWnet_GDSC_self-attention_train.py `
 
 you can set hyper-parameter like this:
 * `python SWnet_GDSC_self-attention_train.py --radius 3 --split_case 0 --layer_gnn 3`
 
 #### Evaluate self-attention SWnet
-* `cd self-attention`
+* `cd self-attention/`
 * `python SWnet_GDSC_self-attention_evaluate.py `
 
 ### or
 
 ### Train a prediction model on CCLE data
 #### Prepare graph data, we can set the radius parameter to 1, 2 ,3 or 4
-* `cd data/CCLE` 
+* `cd data/CCLE/` 
 * `python preprocess_drug_graph.py --radius 1`
 
 #### Prepare drug similarity data
-* `cd data/CCLE`
+* `cd data/CCLE/`
 * `python preprocess_drug_similarity.py`
 
 #### Train self-attention SWnet 
-* `cd self-attention`
+* `cd self-attention/`
 * `python SWnet_CCLE_self-attention_train.py `
 
 you can set hyper-parameter like this:
 * `python SWnet_CCLE_self-attention_train.py --radius 3 --split_case 0 --layer_gnn 3`
 
 #### Evaluate self-attention SWnet
-* `cd self-attention`
+* `cd self-attention/`
 * `python SWnet_CCLE_self-attention_evaluate.py `
 
 #### Run Other scripts
 
 The following scripts training the muti-task SWnet.
-* `cd multi-task`
+* `cd multi-task/`
 * `python SWnet_multi-task.py`
 
 The following scripts training the single-layer SWnet.
 
-* `cd single-layer`
+* `cd single-layer/`
 * `python SWnet_single_no_weight.py`
 * `python SWnet_single_yes_weight.py`
 
 The following scripts training the GDSC gene weight Layer.
 
-* `cd self-attention`
+* `cd self-attention/`
 * `python SWnet_GDSC_self-attention_train.py --radius 3 --split_case 0`
 * `python SWnet_CCLE_self-attention_train.py --radius 3 --split_case 0`
 

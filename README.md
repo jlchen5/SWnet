@@ -19,7 +19,7 @@ The data in the folder is prepared for training and evaluating the SWnet.
 
 Install the requirements (listed in environment.yaml). We're using Anaconda to install the environment:
 ```
-conda create -f environment.yaml
+conda env create -f environment.yaml
 conda activate swnet
 pip install numpy==1.16.2
 ```
